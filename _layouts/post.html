@@ -14,7 +14,7 @@
 		code { border-radius: 2px; background: #f8f8f8; color: #333; padding:2px 5px; border: 1px solid #eee; font-size: 14px; font-family: monospace; }
 		pre code { display: block; white-space: pre-wrap; padding:10px; }
 		article > h1 { text-align: center; font-size: 1.8em; }
-		article > footer { font-family: 'Megrim',"Times New Roman",serif; text-align: right; font-size: 0.8rem; margin-top: 3rem; padding-top: 1rem 0 2rem; font-style: italic; color:#888; } 
+		article > footer { font-family: 'Megrim',"Times New Roman",serif; text-align: right; font-size: 0.8rem; margin: 3rem 0 4rem;   font-style: italic; color:#888; } 
 	</style>
 </head>
 <body>
@@ -28,7 +28,7 @@
 	</article>
 
 
-	<aside class="ds-thread" data-thread-key="{{ page.date | date_to_xmlschema }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></aside> 
+	<aside class="ds-thread" data-thread-key="{{ page.date | date_to_xmlschema }}" data-title="{{ site.baseurl }}{{ page.title }}" data-url="{{ page.url }}"></aside> 
 	<script type="text/javascript">
 	var duoshuoQuery = {short_name:"ethanchengithub"}; (function() {var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true; ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; ds.charset = 'UTF-8'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })();
 	</script> 
