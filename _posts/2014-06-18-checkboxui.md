@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: 改变 checkbox 的 UI
 ---
 ## {{ page.title }}
