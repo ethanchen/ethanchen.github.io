@@ -1,0 +1,14 @@
+---
+title: jekyll 注意要点
+---
+
+
+之前弄了一个 github-page 之后就没里了，对 jekyll 也不是很了解。今天把文档通读了一边，并且测试了一下，记录一下目前需要注意的地方。
+
+- 头部信息需要写上 layout，否则就算在 _config.yml 里面写了也没有，不知道为什么
+- 文件名一定要 `YYYY-MM-DD-标题.扩展名` 格式
+- 链接地址可以该，但是如 `/:title.html` 这种带变量只在配置里有效，在文章里面会直接输出变成 `ethanchen.github.io/:title.html` 
+- 头部可以自定义字段，在模板里面可以通过 page.customer 调用
+- 可以有 category 和 tag 分类
+- 可以有分页
+ 
