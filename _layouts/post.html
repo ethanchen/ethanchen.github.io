@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width">
-	<title>{{ page.title }}</title>
-	<style>
-		body { font:16px/1.6 'Microsoft JhengHei', 'Microsoft Yahei', MingLiU, SimSun, arial,helvetica,sans-serif; color:#555; max-width:800px; margin:0 auto; padding:0 1rem; }
-		a { text-decoration: none; border-bottom: 1px dotted rgba(0,0,0,0.2); color:#555; transition: color .2s; }
-		a:hover { color:rgb(57, 163, 236); }
-		footer, header { padding:1px; text-align: center; }
-		header h1 { font-family: 'Megrim',"Times New Roman",serif; font-size: 2.8rem; }
-		code { border-radius: 2px; background: #f8f8f8; color: #333; padding:2px 5px; border: 1px solid #eee; font-size: 14px; font-family: monospace; }
-		pre code { display: block; white-space: pre-wrap; padding:10px; }
-		article > h1 { text-align: center; font-size: 1.8em; }
-		article > footer { font-family: 'Megrim',"Times New Roman",serif; text-align: right; font-size: 0.8rem; margin: 3rem 0 4rem;   font-style: italic; color:#888; } 
-	</style>
-</head>
+{% include head.html %}
 <body>
 	<header>
 		<h1><a href="http://ethanchen.github.io/">EthanChen</a></h1>
@@ -27,11 +9,9 @@
 		<footer>{{ page.date | date_to_string }}</footer>
 	</article>
 
+	{% include comment.html %}
 
-	<aside class="ds-thread" data-thread-key="{{ page.date | date_to_xmlschema }}" data-title="{{ site.baseurl }}{{ page.title }}" data-url="{{ page.url }}"></aside> 
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"ethanchengithub"}; (function() {var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true; ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; ds.charset = 'UTF-8'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })();
-	</script> 
+	
  
 </body>
 </html>
