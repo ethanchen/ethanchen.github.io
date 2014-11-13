@@ -1,7 +1,7 @@
 ---
 layout: default
 title: just do it
-permalink: wawa-ksi.jj
+permalink: none
 ---
 
 # just do it
