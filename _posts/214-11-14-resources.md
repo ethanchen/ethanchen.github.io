@@ -14,7 +14,7 @@ permalink: /web-resources
 
 圆形进度按钮
 
-![Circular Progress Button](img/circular-progress-button.gif)
+![Circular Progress Button](/img/circular-progress-button.gif)
 
 
 ## [Menu Transition In Effects](http://www.webdesigncrowd.com/menu-transition-effects/)
