@@ -4,6 +4,13 @@ title: Web Resurces
 permalink: /web-resources
 ---
 
+## [Circular Progress Button](http://tympanus.net/Tutorials/CircularProgressButton/)
+
+圆形进度按钮
+
+![Circular Progress Button](img/circular-progress-button.gif)
+
+
 ## [Menu Transition In Effects](http://www.webdesigncrowd.com/menu-transition-effects/)
 
 侧边栏菜单动效
