@@ -4,6 +4,12 @@ title: Web Resurces
 permalink: /web-resources
 ---
 
+## [Dot Navigation Styles](http://tympanus.net/Development/DotNavigationStyles/)
+
+各种翻页指示标效果
+
+![Dot Navigation Styles](/img/dot-navigation-styles.gif)
+
 ## [Circular Progress Button](http://tympanus.net/Tutorials/CircularProgressButton/)
 
 圆形进度按钮
