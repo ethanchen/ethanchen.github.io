@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Share What I Learn 2014-11-26 
+title: Share What I Learn Today
+catgoary: 每天学点新东西
 ---
 
 gulp watch less 遇到错误时终止的解决方法，监听 error ：
