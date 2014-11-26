@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2014-11-26
+title: Share What I Learn 2014-11-26 
 ---
 
 gulp watch less 遇到错误时终止的解决方法，监听 error ：
