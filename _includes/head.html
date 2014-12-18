@@ -18,6 +18,13 @@
 		p img {border: 2px solid #fff; border-radius: 4px; box-shadow: 0 0 2px rgba(0,0,0,0.2); vertical-align: top; }
 	</style>
 	<link href="http://cdn.bootcss.com/prism/0.0.1/prism.min.css" rel="stylesheet">
+	<style>
+
+	.token.tab:not(:empty):before,
+	.token.cr:before,
+	.token.lf:before { content: ''; }
+	pre[class*=language-]>code[data-language]{ max-height: 600px; max-height: 95vh;}
+</style>
 
 </head>
 <body>
