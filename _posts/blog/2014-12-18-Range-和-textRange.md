@@ -1,5 +1,5 @@
 ---
-layout:default
+layout: default
 title: dom Range 和 textRange
 ---
 
