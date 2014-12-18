@@ -3,8 +3,6 @@ layout: default
 title: dom Range 和 textRange
 ---
 
-# dom Range 和 textRange
-
 ## 两个概念 selection 和 range
 
 selection  就是选区，就是鼠标画上蓝色的区域，理论上是可以包含多个区域，但一般浏览器都不支持选择多个不同区域的文本。
