@@ -105,5 +105,80 @@ s.addRange(bm)
 
 
 
+## 一个富文本框内粘贴纯文本的例子
+
+```
+/* pasteAsPlainText */
+var self = {};
+self.doc = document;
+self.win = window;
+
+if (document.selection) { // ie
+
+	$(self.doc.body).bind('beforepaste', function(e){ // ie paste 事件在 body 上
+		var r = self.doc.selection.createRange();
+    	var bookmark = r.getBookmark();
+		var dom = $('<textarea id="editor-plaintext-helper" style="display:none;">&nbsp;</textarea>').appendTo(self.doc.body)[0]; // 必须有字符，不然选不到
+		r.moveToElementText(dom); 
+		r.moveStart('character',0); 
+		r.moveEnd('character',0);  // 当前选区的结束位置往后移动x个字符
+		r.select(); 
+		setTimeout(function(){ // 等待粘贴
+			var d = self.doc.getElementById('editor-plaintext-helper');
+			var txt = d.value; 
+			txt = $('<div/>').text(txt).html();
+			txt = txt.replace(/\n/g,'<br/>');
+			$(d).remove();
+    		if (bookmark) {
+	    		r.moveToBookmark(bookmark);
+	    		r.select();
+	    		bookmark = null;
+	    		self.insertHtml(txt);	
+    		}
+
+		},0);
+	});
+
+
+} else if (window.getSelection) { 
+
+	$(self.doc.body).bind('paste', function(e){
+		if (e.originalEvent.clipboardData) {
+
+			e.preventDefault();
+			var txt = e.originalEvent.clipboardData.getData('text/plain');
+			txt = $('<div/>').text(txt).html();
+			txt = txt.replace(/\n/g,'<br/>');
+			self.doc.exceCommand('insertHTML',false,txt);
+
+		} else { // 备用方案，由于在firefox 下 textarea 无法聚焦，所以该方案对 ff 无效
+
+			var textarea, bookmark, r, s;
+			s = self.win.getSelection();
+			r = self.doc.createRange(); 
+			bookmark = s.getRangeAt(0);
+			textarea = $('<textarea id="editor-plaintext-helper" style="height:0!important;width:0!important:border:0!important;padding:0;overflow:hidden;opacity:0;">&nbsp;</textarea>').appendTo(self.doc.body)[0];   // display:none 会导致无法选中
+			textarea.setSelectionRange(0,1); 
+			textarea.focus();
+			setTimeout(function(){
+			 	var d = self.doc.getElementById('editor-plaintext-helper');
+				var txt = d.value;
+				txt = $('<div/>').text(txt).html();
+				txt = txt.replace(/\n/g,'<br/>');
+				$(d).remove();
+				s.removeAllRanges();
+			 	s.addRange(bookmark); 
+			 	self.doc.exceCommand('insertHTML',false,txt);
+			},0);	
+
+		}
+	});
+
+}  
+```
+
+
+
+
 
 
