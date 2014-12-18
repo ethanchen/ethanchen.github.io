@@ -34,12 +34,14 @@ r.moveStart('character', 1) // 区域的起始位置往后挪一个字符
 r.moveEnd('character', -1) // 区域的结束位置往前挪一个字符，注意，往前是负数
 r.select(); // 让这个区域选中
 ```
+
 其实{1}{2}两句可以合并成一句 `var r = node.creatTextRange();` 。但要注意这里有个 Text 字样。
 
 
 ## W3C标准 Range
 
 再来说一下w3c的标准：
+
 ```
 var s = window.getSelection(); // selection 是属于 window 的
 var r = document.createRange(); // 由 document 来创建区域
@@ -70,7 +72,8 @@ textRange.select()
 
 可以把当前选中的区域加个书签，处理其他事之后再选择回来。常用于对刚刚粘贴内容的处理。
 
-Range 的书签呢？ 
+Range 的书签呢？
+
 ```
 var s = window.getSelection()
 var bm = s.getRangeAt(0)
@@ -107,7 +110,7 @@ s.addRange(bm)
 
 ## 一个富文本框内粘贴纯文本的例子
 
-```
+```javascript
 /* pasteAsPlainText */
 var self = {};
 self.doc = document;
@@ -157,7 +160,7 @@ if (document.selection) { // ie
 			s = self.win.getSelection();
 			r = self.doc.createRange(); 
 			bookmark = s.getRangeAt(0);
-			textarea = $('<textarea id="editor-plaintext-helper" style="height:0!important;width:0!important:border:0!important;padding:0;overflow:hidden;opacity:0;">&nbsp;</textarea>').appendTo(self.doc.body)[0];   // display:none 会导致无法选中
+			textarea = $('<textarea id="editor-plaintext-helper" style="height:0;width:0;border:0;overflow:hidden;opacity:0;">&nbsp;</textarea>').appendTo(self.doc.body)[0];   // display:none 会导致无法选中
 			textarea.setSelectionRange(0,1); 
 			textarea.focus();
 			setTimeout(function(){
