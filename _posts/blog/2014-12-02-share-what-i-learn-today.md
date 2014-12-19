@@ -16,3 +16,7 @@ filter: e("ms:alwaysHasItsOwnSyntax.For.Stuff()");
 filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
 ```
 
+项目中遇到一些不能通过编译的规则：
+
+- 带符号和`\9`的，如 `top:-11px \9;` 只能改成 `top:e('-11px \9');`
+
