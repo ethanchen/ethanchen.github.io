@@ -1,6 +1,6 @@
 ---
 layout: default
-title: gulp rev all
+title: 用 gulp 做静态资源版本控制
 ---
 
 目录结构 
