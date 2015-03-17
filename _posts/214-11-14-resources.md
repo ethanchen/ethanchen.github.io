@@ -3,6 +3,8 @@ layout: default
 title: Web Resurces
 permalink: /web-resources
 ---
+## [stellar.js](http://markdalgleish.com/projects/stellar.js/docs/) 视差滚动插件 parallax-background 
+
 
 ## [pagedown](https://github.com/ujifgc/pagedown) 一个 markdown 编辑器
 
